@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Cá Nhân</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* SỬA LỖI HIỂN THỊ MENU CẤP 2 CỦA SÁCH ĐIỆN TỬ */
+        .dropdown-student-content {
+            overflow: visible !important; /* Cho phép menu con hiển thị tràn ra ngoài khung đen */
+        }
+        
+        .submenu-parent {
+            position: relative;
+        }
+        
+        .submenu-content {
+            display: none;
+            position: absolute;
+            left: 100%; /* Đẩy menu con sang cạnh phải */
+            top: 0;
+            background-color: #222222; /* Màu nền tối hơn một chút để phân biệt */
+            min-width: 180px;
+            box-shadow: 4px 8px 15px rgba(0,0,0,0.3);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-radius: 0 6px 6px 6px;
+            z-index: 9999; /* Đảm bảo nổi lên trên cùng */
+        }
+        
+        .submenu-content li a {
+            padding: 10px 15px !important;
+            font-size: 13px !important;
+            color: #ffffff !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+            display: block;
+            text-align: left;
+        }
+
+        .submenu-content li a:hover {
+            background-color: #444444 !important; /* Hiệu ứng đổi màu khi chọn sách */
+        }
+
+        /* Hỗ trợ hiển thị mượt mà khi rê chuột vào */
+        .submenu-parent:hover .submenu-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="https://colab.research.google.com/drive/16eDVfqin4TFPSl0LHkb_k9laV8bp6Y1E">Học sinh</a></li>
+                <li><a href="https://youtu.be/cZQ6m3W4OU4?si=MOO56_Hami38hMRb">Lập trình Python</a></li>
+                <li><a href="https://taphuan.nxbgd.vn/tap-huan">Tập huấn SGK KNTT & CS</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-banner">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop" alt="Banner Lập Trình Công Nghệ">
+        </div>
+
+        <section class="intro">
+            <h1>Xin chào, tôi là một Giáo viên Tin học</h1>
+            <p>Chào mừng bạn đến với không gian chia sẻ kiến thức lập trình và phương pháp giảng dạy công nghệ.</p>
+            
+            <div class="dropdown" style="margin-bottom: 20px;">
+                <button class="btn-explore dropbtn-explore">Khám phá ngay <span class="arrow">▼</span></button>
+                <ul class="dropdown-content dropdown-explore-content" style="min-width: 300px; left: 50%; transform: translateX(-50%);">
+                    <li class="menu-heading"><b>🔬 KHOA HỌC KỲ THÚ</b></li>
+                    <li><a href="#">⚡ Mưa sét núi lửa dữ dội</a></li>
+                    <li><a href="#">🌌 Cực quang huyền ảo phương Bắc</a></li>
+                    <li><a href="#">🌊 Biển phát quang sinh học xanh lam</a></li>
+                    <li><a href="#">🧊 Bong bóng khí đóng băng Abraham</a></li>
+                </ul>
+            </div>
+            
+            <section class="button-group-container">
+                <h2>Khu Vực Quản Lý & Học Tập</h2>
+                <p>Vui lòng chọn phân hệ phù hợp để tiếp tục:</p>
+                
+                <div class="button-group">
+                    
+                    <div class="dropdown">
+                        <a href="#" class="btn-item btn-student dropbtn-student">HỌC SINH <span class="arrow">▼</span></a>
+                        <ul class="dropdown-content dropdown-student-content">
+                            <li><a href="#">📅 NĂM HỌC 2025-2026</a></li>
+                            <li><a href="#">📂 NĂM HỌC 2023-2024</a></li>
+                            <li><a href="#">📂 NĂM HỌC 2024-2025</a></li>
+                            
+                            <li class="submenu-parent">
+                                <a href="#" class="sub-toggle">📚 Sách điện tử (HTS) <span style="float: right; font-size: 10px;">▶</span></a>
+                                <ul class="submenu-content">
+                                    <li><a href="https://drive.google.com/file/d/1unwj4yP-1SzYLaFQ2G2_fxsiWbr1sJ92/view" target="_blank">📖 SGK Tin học 6</a></li>
+                                    <li><a href="https://drive.google.com/file/d/1S06lSvKju3kFnCNSGnRO2zI_50KnRbwz/view" target="_blank">📖 SGK Tin học 7</a></li>
+                                    <li><a href="https://drive.google.com/file/d/1TIaY2IrJhWp6vl-kQRw7TkJE2W_FlM92/view" target="_blank">📖 SGK Tin học 8</a></li>
+                                    <li><a href="https://drive.google.com/file/d/1Hy4OuG3UWzWrNIPG31MlRISm1lVGy-kG/view" target="_blank">📖 SGK Tin học 9</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="#">💻 Lập trình Python học đường</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <a href="#" class="btn-item btn-teacher dropbtn-teacher">GIÁO VIÊN <span class="arrow">▼</span></a>
+                        <ul class="dropdown-content dropdown-teacher-content" style="min-width: 320px; max-height: 450px; overflow-y: auto;">
+                            <li class="menu-heading"><b>📜 CHƯƠNG TRÌNH & QUY ĐỊNH</b></li>
+                            <li><a href="https://drive.google.com/file/d/1WOC379vw2-B_D5D7jQZnLbAialWKr_fJ/view?usp=drive_link" target="_blank">CT GDPT Tổng thể</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/1XQkwl-e1zIjlmG3Yy7el-MhEjIivCT0f?usp=sharing" target="_blank">CT GD các môn học cụ thể</a></li>
+                            <li><a href="https://drive.google.com/file/d/1HQUS-KBJJ1yS8QHJxVjczNuYUVIcAW3p/view?usp=drive_link" target="_blank">CT môn Tin học 2018</a></li>
+                            <li><a href="https://drive.google.com/file/d/1z_DMjLMOE-kGQfciFMMq1zkTw4SmyRAJ/view?usp=sharing" target="_blank">Tài liệu tìm hiểu CT Tin học</a></li>
+                            <li><a href="https://drive.google.com/file/d/1iBlJyNjYCq6kxBC2GHrsuc7wd_ZCvbVY/view?usp=sharing" target="_blank">CT môn Tin học (Hình ảnh)</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/185_jNvTshr9AY6rYoD6wNWnLv95XCWEx?usp=sharing" target="_blank">Văn bản pháp quy</a></li>
+                            <li><a href="https://drive.google.com/file/d/16tPwQSxNi3aATdR0Lgwh6BFVGyfOpgBt/view?usp=drive_link" target="_blank">Hướng dẫn xây dựng đề kiểm tra</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/1lus4dDH9zHOGsQ0G7G0zOKiYmeSB4Vau?usp=sharing" target="_blank">Hướng dẫn 5512</a></li>
+                            <li><a href="https://vqa.moet.gov.vn/vi/laws/detail/Van-ban-hop-nhat-Thong-tu-ban-hanh-Quy-che-thi-chon-hoc-sinh-gioi-cap-quoc-gia-10/" target="_blank">Quy chế thi HSG Quốc gia</a></li>
+                            
+                            <li class="menu-heading"><b>📘 SÁCH & GIÁO ÁN KNTT</b></li>
+                            <li><a href="https://taphuan.nxbgd.vn/#/training-course-detail/79b3c4aa-2580-41ac-b4d6-be30e8918440" target="_blank">SGK Tin học 6 KNTTVCS</a></li>
+                            <li><a href="https://taphuan.nxbgd.vn/#/training-course-detail/2990065b-5059-557b-ac51-d826ca738dcc" target="_blank">SGK Tin học 7 KNTTVCS</a></li>
+                            <li><a href="https://taphuan.nxbgd.vn/#/training-course-detail/cda72549-bbad-48fc-832c-05b92e35202c" target="_blank">SGK Tin học 8 KNTTVCS</a></li>
+                            <li><a href="https://taphuan.nxbgd.vn/#/training-course-detail/b99bbea8-10bc-14a2-b6ea-7d5688e6a0d8" target="_blank">SGK Tin học 9 KNTTVCS</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/1l8L9lVk0AlQmlBrn1R1HEvGu-y2sQQGn?usp=drive_link" target="_blank">Tài liệu hỗ trợ dạy Tin 6</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/1Av582hE6wvlmPULyIvZFIi-gn_24ftzr?usp=drive_link" target="_blank">Tài liệu hỗ trợ dạy Tin 7</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/1l4XiL1udlE7sOrnN40lzTyVqIKV-4y3s?usp=drive_link" target="_blank">Tài liệu hỗ trợ dạy Tin 8</a></li>
+                            <li><a href="https://drive.google.com/drive/u/0/folders/1P1kAjXSGxRFjJEqe2FJjoIutosuTGc9q" target="_blank">Tài liệu hỗ trợ dạy Tin 9</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/1Rg13gvsov8jPgWQUtiZgiiAYvTl_a9Ab" target="_blank">TL tập huấn Tin 9 (Bản mềm)</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/13Ds3RSY4Z9oMS6JBwtDCoQj7gWTaSW3w?usp=drive_link" target="_blank">Kế hoạch bài dạy (Giáo án)</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/1xK90Dp9rvPgZ39StbqgwmhC49j0Yf-Rm?usp=drive_link" target="_blank">Slides các bài học</a></li>
+                            <li><a href="https://drive.google.com/file/d/1gCctMKavmouPSdCoCQxqzJzX716kCP5r/view?usp=drive_link" target="_blank">Tiết dạy minh họa Tin học 9</a></li>
+                            <li><a href="https://www.facebook.com/groups/716153755931767" target="_blank">Nhóm FB: SGK Tin học 6789</a></li>
+                            
+                            <li class="menu-heading"><b>🛠️ CÔNG CỤ HỖ TRỢ DẠY HỌC</b></li>
+                            <li><a href="http://www.flowgorithm.org/" target="_blank">Công cụ vẽ lưu đồ Flowgorithm</a></li>
+                            <li><a href="https://scratch.mit.edu/projects/886339759/" target="_blank">Scratch: Pha màu vẽ (B5)</a></li>
+                            <li><a href="https://scratch.mit.edu/projects/872880962/fullscreen/" target="_blank">Scratch: Bám tường phải 1 (B14)</a></li>
+                            <li><a href="https://scratch.mit.edu/projects/839510745/fullscreen/" target="_blank">Scratch: Bám tường phải 2 (B14)</a></li>
+                            <li><a href="https://scratch.mit.edu/projects/835277606/" target="_blank">Scratch: Dịch Việt - Anh (B15)</a></li>
+                            <li><a href="https://scratch.mit.edu/projects/813756610/" target="_blank">Scratch: Đồng hồ ba kim (B15)</a></li>
+                            <li><a href="https://scratch.mit.edu/projects/905543585/" target="_blank">Scratch: Tính lương NV1 (B16)</a></li>
+                            <li><a href="https://scratch.mit.edu/projects/123089801/" target="_blank">Scratch: Tính lương NV2 (B16)</a></li>
+                            <li><a href="https://www.plickers.com/" target="_blank">Plickers - Trắc nghiệm tương tác</a></li>
+                            <li><a href="https://camnangdayhoc.com/plickers-cong-cu-kiem-tra-bai-cu-don-gian-hieu-qua/" target="_blank">Cẩm nang hướng dẫn Plickers</a></li>
+                            <li><a href="https://jamboard.google.com/" target="_blank">Google Jamboard (Bảng tương tác)</a></li>
+                            <li><a href="https://wordwall.net/" target="_blank">Wordwall (Tạo hoạt động đánh giá)</a></li>
+                            <li><a href="https://drive.google.com/file/d/1UYnGXMQ04sXKiz4jkuN8bV95vfzYrEjq/view?usp=sharing" target="_blank">Thủ thuật: Shut down or Restart...</a></li>
+
+                            <li class="menu-heading"><b>🤖 TRÍ TUỆ NHÂN TẠO (AI)</b></li>
+                            <li><a href="https://coach.microsoft.com/webapp" target="_blank">Microsoft Reading Coach (Luyện đọc)</a></li>
+                            <li><a href="https://suno.com/create" target="_blank">Suno AI (Tạo bài hát)</a></li>
+                            <li><a href="https://gemini.google.com" target="_blank">Google Gemini (Tạo nội dung)</a></li>
+                            <li><a href="https://chat.openai.com" target="_blank">OpenAI ChatGPT (Tạo nội dung)</a></li>
+                            <li><a href="https://www.bing.com/copilot" target="_blank">Microsoft Copilot (Nội dung & Ảnh)</a></li>
+                            <li><a href="https://gamma.app/" target="_blank">Gamma App (Tạo bài trình chiếu)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <a href="#" class="btn-item btn-python dropbtn-python">BÀI TẬP PYTHON <span class="arrow">▼</span></a>
+                        <ul class="dropdown-content dropdown-python-content">
+                            <li><a href="https://codet29.blogspot.com/2025/06/than-tuong-so-ep-li-xi-au-nam.html" target="_blank"><b>Buổi 1:</b> Thần tượng số, Ép lì xì...</a></li>
+                            <li><a href="https://codet29.blogspot.com/2025/06/so-nguyen-to-q-suc-manh-mat-ma-day-so.html" target="_blank"><b>Buổi 2:</b> Số nguyên tố Q, Mật mã...</a></li>
+                            <li><a href="https://codet29.blogspot.com/2025/06/so-ep-xoa-ky-tu-sap-xep-day-so-phan-qua.html" target="_blank"><b>Buổi 3:</b> Số ép, Xóa ký tự...</a></li>
+                            <li><a href="https://codet29.blogspot.com/2025/06/buoi-4-truc-nhat-dien-tich-hinh-chu-nhat.html" target="_blank"><b>Buổi 4:</b> Trực nhật, Diện tích HCN</a></li>
+                            <li><a href="https://codet29.blogspot.com/2025/06/buoi-5-chia-qua-ma-so-nhan-vien-xau-oi.html" target="_blank"><b>Buổi 5:</b> Chia quà, Mã số NV...</a></li>
+                            <li><a href="https://codet29.blogspot.com/2025/06/buoi-6-tong-va-luy-thua-xau-oi-xung-em.html" target="_blank"><b>Buổi 6:</b> Tổng và lũy thừa...</a></li>
+                            <li><a href="#"><b>Buổi 7:</b> Đang cập nhật...</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <a href="#" class="btn-item btn-entertainment dropbtn-entertainment">GIẢI TRÍ <span class="arrow">▼</span></a>
+                        <ul class="dropdown-content dropdown-entertainment-content" style="min-width: 250px;">
+                            <li class="menu-heading"><b>🎮 MINI GAMES TRÍ TUỆ</b></li>
+                            <li><a href="https://tetris.com/play-tetris" target="_blank">🧩 Xếp hình Tetris cổ điển</a></li>
+                            <li><a href="https://2048game.com/" target="_blank">🔢 Trò chơi số học 2048</a></li>
+                            <li><a href="https://www.chess.com/play/computer" target="_blank">♟️ Đánh Cờ Vua với Máy</a></li>
+                            <li><a href="https://minesweeperonline.com/" target="_blank">💣 Dò mìn Minesweeper</a></li>
+                            <li><a href="https://quickdraw.withgoogle.com/?locale=vi" target="_blank">🎨 AI Đoán Hình (Google Quick Draw)</a></li>
+                            <li><a href="https://www.google.com/fbx?fbx=snake_page" target="_blank">🐍 Rắn săn mồi (Google Snake)</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Trang web cá nhân. Được thiết kế với lòng nhiệt huyết.</p>
+    </footer>
+
+    <script>
+        const btnExplore = document.querySelector('.dropbtn-explore');
+        const contentExplore = document.querySelector('.dropdown-explore-content');
+
+        const btnStudent = document.querySelector('.dropbtn-student');
+        const contentStudent = document.querySelector('.dropdown-student-content');
+
+        const btnTeacher = document.querySelector('.dropbtn-teacher');
+        const contentTeacher = document.querySelector('.dropdown-teacher-content');
+
+        const btnPython = document.querySelector('.dropbtn-python');
+        const contentPython = document.querySelector('.dropdown-python-content');
+
+        const btnEntertainment = document.querySelector('.dropbtn-entertainment');
+        const contentEntertainment = document.querySelector('.dropdown-entertainment-content');
+
+        const subToggle = document.querySelector('.sub-toggle');
+        const subContent = document.querySelector('.submenu-content');
+
+        // Hàm ẩn tất cả menu con cấp 1
+        function closeAllMenus() {
+            if(contentExplore) contentExplore.style.display = 'none';
+            contentStudent.style.display = 'none';
+            contentTeacher.style.display = 'none';
+            contentPython.style.display = 'none';
+            contentEntertainment.style.display = 'none';
+            if(subContent) subContent.style.display = 'none';
+        }
+
+        // Bấm nút Khám Phá Ngay
+        btnExplore.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isOpened = contentExplore.style.display === 'block';
+            closeAllMenus();
+            if (!isOpened) contentExplore.style.display = 'block';
+        });
+
+        // Bấm nút Học Sinh
+        btnStudent.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isOpened = contentStudent.style.display === 'block';
+            closeAllMenus();
+            if (!isOpened) contentStudent.style.display = 'block';
+        });
+
+        // Đóng/Mở riêng mục Sách điện tử (Dành cho điện thoại hoặc khi bấm chuột)
+        if(subToggle) {
+            subToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation(); // Không làm đóng menu cha
+                const isSubOpened = subContent.style.display === 'block';
+                subContent.style.display = isSubOpened ? 'none' : 'block';
+            });
+        }
+
+        // Bấm nút Giáo Viên
+        btnTeacher.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isOpened = contentTeacher.style.display === 'block';
+            closeAllMenus();
+            if (!isOpened) contentTeacher.style.display = 'block';
+        });
+
+        // Bấm nút Bài tập Python
+        btnPython.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isOpened = contentPython.style.display === 'block';
+            closeAllMenus();
+            if (!isOpened) contentPython.style.display = 'block';
+        });
+
+        // Bấm nút Giải Trí
+        btnEntertainment.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isOpened = contentEntertainment.style.display === 'block';
+            closeAllMenus();
+            if (!isOpened) contentEntertainment.style.display = 'block';
+        });
+
+        // Bấm ra ngoài vùng menu trống thì tự thu gọn lại tất cả
+        window.addEventListener('click', function(e) {
+            if (!btnExplore.contains(e.target) &&
+                !btnStudent.contains(e.target) && 
+                !btnTeacher.contains(e.target) && 
+                !btnPython.contains(e.target) && 
+                !btnEntertainment.contains(e.target)) {
+                closeAllMenus();
+            }
+        });
+    </script>
+
+</body>
+</html>

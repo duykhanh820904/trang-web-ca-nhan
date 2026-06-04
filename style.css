@@ -1,0 +1,271 @@
+/* ==========================================
+   1. THIẾT LẬP CƠ BẢN
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Màu nền xám nhạt nhẹ nhàng hơn */
+    color: #333;
+}
+
+/* ==========================================
+   2. THANH MENU (HEADER)
+   ========================================== */
+header {
+    background-color: #1a1a1a; /* Màu đen chủ đạo */
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Đổi thành inline-block để mượt mà hơn */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff; /* Chữ trắng */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #cccccc; /* Rê chuột vào đổi sang xám nhạt tinh tế */
+}
+
+/* ==========================================
+   3. PHẦN GIỚI THIỆU CHÍNH (INTRO)
+   ========================================== */
+.intro {
+    text-align: center;
+    padding: 60px 30px; /* Điều chỉnh lại padding cho cân đối */
+    background-color: #ffffff;
+    max-width: 900px; /* Tăng nhẹ độ rộng để chứa đủ 4 nút thoải mái */
+    margin: 40px auto;
+    border-radius: 12px; /* Bo góc tròn trịa hiện đại hơn */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Hiệu ứng đổ bóng mịn */
+}
+
+h1 {
+    color: #1a1a1a;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.btn-explore {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-explore:hover {
+    background-color: #444444;
+    transform: translateY(-2px); /* Nhấc nhẹ nút lên khi rê chuột */
+}
+
+/* ==========================================
+   4. KHU VỰC CÁC NÚT LỆNH CHỨC NĂNG
+   ========================================== */
+.button-group-container {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #eee; /* Đường gạch ngang phân cách tinh tế */
+}
+
+.button-group-container h2 {
+    font-size: 1.6rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px; /* Thu hẹp khoảng cách một chút để 4 nút nằm thẳng hàng đẹp hơn */
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    flex-wrap: wrap; /* Tự động xuống dòng mượt mà nếu màn hình quá nhỏ */
+}
+
+/* Định dạng các nút chức năng theo tông màu tối thanh lịch */
+.btn-item {
+    display: inline-block;
+    padding: 14px 20px; /* Điều chỉnh khoảng đệm để cân đối chữ */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px; /* Giảm 1px để thanh thoát khi có 4 nút */
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 135px;
+}
+
+/* Phối màu các nút hài hòa với nền đen chủ đạo */
+.btn-student { background-color: #1a1a1a; } /* Nút Học Sinh tiệp màu Header */
+.btn-teacher { background-color: #2c3e50; } /* Giáo viên màu xanh đen lịch sự */
+.btn-docs    { background-color: #7f8c8d; } /* Tài liệu màu xám cổ điển */
+.btn-python  { background-color: #d35400; } /* Python màu cam đất tạo điểm nhấn */
+.btn-entertainment { background-color: #8e44ad; } /* Giải trí màu tím khói cá tính */
+
+.btn-item:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ==========================================
+   5. PHẦN XỬ LÝ DANH SÁCH SỔ XUỐNG (DROPDOWN CHUNG)
+   ========================================== */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Định dạng chung cấu trúc các bảng danh sách con đổ xuống */
+.dropdown-content {
+    display: none; /* JavaScript sẽ kích hoạt hiển thị */
+    position: absolute;
+    top: 105%;
+    left: 0;
+    min-width: 220px;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.15);
+    z-index: 99;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Định dạng màu sắc riêng biệt cho từng khối danh sách con */
+.dropdown-explore-content {
+    background-color: #1a1a1a; /* Đen đồng bộ nút KHÁM PHÁ NGAY */
+}
+
+.dropdown-student-content {
+    background-color: #1a1a1a; /* Đen đồng bộ nút HỌC SINH */
+}
+
+.dropdown-teacher-content {
+    background-color: #2c3e50; /* Xanh đen đồng bộ nút GIÁO VIÊN */
+}
+
+.dropdown-python-content {
+    background-color: #d35400; /* Cam đất đồng bộ nút BÀI TẬP PYTHON */
+}
+
+.dropdown-entertainment-content {
+    background-color: #8e44ad; /* Tím khói đồng bộ nút GIẢI TRÍ */
+}
+
+/* Từng dòng liên kết nhỏ bên trong bảng menu con */
+.dropdown-content li a {
+    color: #ffffff;
+    padding: 12px 18px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: normal;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Gạch mờ phân chia */
+    transition: background 0.2s ease;
+}
+
+.dropdown-content li:last-child a {
+    border-bottom: none;
+}
+
+/* Hiệu ứng đổi màu nền khi rê chuột vào các mục con từng menu */
+.dropdown-explore-content li a:hover {
+    background-color: #333333; /* Đổi sang màu xám nhẹ */
+}
+
+.dropdown-student-content li a:hover {
+    background-color: #333333; /* Đổi sang màu xám nhẹ */
+}
+
+.dropdown-teacher-content li a:hover {
+    background-color: #34495e; /* Đổi sang xanh đen sáng hơn */
+}
+
+/* Định dạng thanh cuộn dọc (Scrollbar) cho danh sách Giáo viên khi quá dài */
+.dropdown-teacher-content::-webkit-scrollbar {
+    width: 6px;
+}
+.dropdown-teacher-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+.dropdown-teacher-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+.dropdown-teacher-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.dropdown-python-content li a:hover {
+    background-color: #e67e22; /* Đổi sang cam sáng */
+}
+
+.dropdown-entertainment-content li a:hover {
+    background-color: #9b59b6; /* Đổi sang màu tím sáng tươi tắn */
+}
+
+/* Tiêu đề nhóm phân loại trong danh sách các menu */
+.dropdown-content .menu-heading {
+    background-color: rgba(0, 0, 0, 0.2); /* Làm tối vùng tiêu đề một chút */
+    color: #ffeb3b; /* Chữ màu vàng nổi bật để phân biệt */
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: left;
+    cursor: default; /* Không đổi icon bàn tay bấm link */
+}
+
+/* Mũi tên nhỏ đi kèm các nút có menu */
+.arrow {
+    font-size: 10px;
+    margin-left: 6px;
+    transition: transform 0.3s;
+}
+
+/* ==========================================
+   6. CHÂN TRANG (FOOTER CẢI TIẾN)
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #1a1a1a;
+    color: #888888;
+    font-size: 14px;
+    margin-top: 60px; /* Khoảng cách an toàn để menu thả xuống không che khuất chữ */
+    width: 100%;
+    box-sizing: border-box;
+}
